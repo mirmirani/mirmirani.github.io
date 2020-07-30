@@ -82,6 +82,7 @@ margin-bottom: 0%;
 display: flex;
 flex-flow: row wrap;
 overflow: hidden;
+justify-content: center;
 padding: 1%;
 
 }
