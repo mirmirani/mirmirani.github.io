@@ -1,6 +1,5 @@
-body, h1 {
+* {
     font-family: Georgia;
-
 }
 
 .main {
@@ -40,18 +39,27 @@ body, h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: justify;
+    
 }
 
 .ip {
 background-color: white;
-height: 100px;
 width: 300px;
 margin: 2%;
 border-radius: 20px;
+padding: 2%;
+max-height: 100%;
+font-size: medium;
 }
 
 .ip2{
     align-self: flex-end;
+}
+
+.ipw1 h5 {
+    text-decoration: underline;
+    font-family: Georgia;
 }
 
 .ipw2 {
