@@ -15,39 +15,75 @@ body, h1 {
     padding: 2%;
 }
 
-.intro {
-height: 300px;
-background-color: olive;
-}
+
 
 .aboutme a {
     color: white;
 }
 
 .aboutme {
-    height: 300px;
+    height: 600px;
     text-align: center;
     background-image: url(assets/bg-wheat.png);
     background-repeat: repeat;
+    height: 100%;
+    display: flex;
+    padding: 1%;
 
+}
+
+.intro {
+    }
+    
+.ipw1 {
+    flex: 0 0 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ip {
+background-color: white;
+height: 100px;
+width: 300px;
+margin: 2%;
+border-radius: 20px;
+}
+
+.ip2{
+    align-self: flex-end;
+}
+
+.ipw2 {
+    flex: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 500%;
+    margin-left: 10%;
 }
 
 
 .vanillajs {
-height: 500px;
 background-image: url(assets/bg-halftone-yellow.png);
 background-repeat: repeat;
 margin: 0;
-
+padding: 2%;
+overflow: hidden;
+height: 100%;
 }
 
 .vanillajs h1 {
 margin-bottom: 0%;
+
 }
 
 .jsexamples{
 display: flex;
 flex-flow: row wrap;
+overflow: hidden;
+padding: 1%;
+
 }
 
 .jsex {
@@ -56,6 +92,7 @@ height: 200px;
 width: 200px;
 margin: 2%;
 border-radius: 20px;
+
 
 }
 
