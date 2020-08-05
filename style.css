@@ -10,7 +10,7 @@
 }
 
 .chapter {
-    height: 500px;
+    height: 110%;
     padding: 2%;
 }
 
@@ -86,7 +86,7 @@ margin-bottom: 0%;
 
 }
 
-.jsexamples{
+.flexwrap {
 display: flex;
 flex-flow: row wrap;
 overflow: hidden;
@@ -95,36 +95,31 @@ padding: 1%;
 
 }
 
-.jsex {
+.flexex {
 background-color: white;
-height: 200px;
-width: 200px;
 margin: 2%;
-border-radius: 20px;
+border-radius: 10px;
 
 
 }
 
 .react {
-height: 500px;
 background-image: url(assets/bg-morocco-blue.png);
 background-repeat: repeat;
 }
 
 
 .django {
-height: 600px;
 background-image: url(assets/bg-green.png);
 background-repeat: repeat;
 }
 
 .golang {
-height: 500px;
 background-image: url(assets/bg-django.png);
 background-repeat: repeat;
 }
 
-.aws {
+.books {
 height: 100%;
 padding: 2%;
 background-image: url(assets/food.png);
@@ -132,3 +127,7 @@ background-repeat: repeat;
 text-align: left;
 }
 
+.mySlides {
+    margin: 2%;
+
+}
