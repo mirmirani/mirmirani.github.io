@@ -14,7 +14,34 @@
     padding: 2%;
 }
 
+img {
+    margin-bottom: 3%;
+}
 
+.btnwrap{
+
+    margin: 5% 0 5% 0;
+    display: flex;
+    justify-content: center;
+
+}
+
+.btn {
+    border-radius: 7px;
+    border-style: solid;
+    border-color: lightcoral;
+    border-width: 1.4px;
+    padding: 1.5% 5%;
+    margin: 0% 3%;
+}
+
+.btn:link {
+    text-decoration: none;
+}
+
+.btn:hover{
+   box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
 
 .aboutme a {
     color: white;
@@ -99,7 +126,7 @@ padding: 1%;
 background-color: white;
 margin: 2%;
 border-radius: 10px;
-
+text-align: center;
 
 }
 
