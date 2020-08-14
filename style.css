@@ -56,6 +56,7 @@ img {
     display: flex;
     padding: 1%;
 
+
 }
 
 
@@ -125,7 +126,7 @@ background-color: white;
 margin: 2%;
 border-radius: 10px;
 text-align: center;
-
+max-width: 40%;
 }
 
 .react {
@@ -185,3 +186,17 @@ text-align: left;
     margin: 0;
     color: white;
 }
+
+@media only screen and (max-width: 600px) {
+    .flexwrap {
+flex-direction: column;
+    }
+
+    .flexex {
+        max-width: 80%;
+    }
+
+    .books{
+        display: none;
+    }
+  }

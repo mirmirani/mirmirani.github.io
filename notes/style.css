@@ -50,11 +50,12 @@ img {
 .aboutme {
     height: 600px;
     text-align: center;
-    background-image: url(assets/bg-wheat.png);
+    background-image: url(../assets/bg-wheat.png);
     background-repeat: repeat;
     height: 100%;
     display: flex;
     padding: 1%;
+
 
 }
 
@@ -98,7 +99,7 @@ text-align: left;
 
 
 .vanillajs {
-background-image: url(assets/bg-halftone-yellow.png);
+background-image: url(../assets/bg-halftone-yellow.png);
 background-repeat: repeat;
 margin: 0;
 padding: 2%;
@@ -125,29 +126,29 @@ background-color: white;
 margin: 2%;
 border-radius: 10px;
 text-align: center;
-
+max-width: 40%;
 }
 
 .react {
-background-image: url(assets/bg-morocco-blue.png);
+background-image: url(../assets/bg-morocco-blue.png);
 background-repeat: repeat;
 }
 
 
 .django {
-background-image: url(assets/bg-green.png);
+background-image: url(../assets/bg-green.png);
 background-repeat: repeat;
 }
 
 .golang {
-background-image: url(assets/bg-django.png);
+background-image: url(../assets/bg-django.png);
 background-repeat: repeat;
 }
 
 .books {
 height: 100%;
 padding: 2%;
-background-image: url(assets/food.png);
+background-image: url(../assets/food.png);
 background-repeat: repeat;
 text-align: left;
 }
@@ -159,7 +160,7 @@ text-align: left;
 
 
 .Reachme {
-    background-image: url(assets/bg-memphis.png);
+    background-image: url(../assets/bg-memphis.png);
     background-repeat: repeat;
     margin: 0;
     padding: 4%;
@@ -185,3 +186,19 @@ text-align: left;
     margin: 0;
     color: white;
 }
+
+@media only screen and (max-width: 600px) {
+    .flexwrap {
+flex-direction: column;
+    }
+
+    .flexex {
+        max-width: 80%;
+    }
+
+    .books{
+        display: none;
+    }
+  }
+
+  
