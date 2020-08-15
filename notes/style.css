@@ -1,4 +1,4 @@
-*, h1 {
+*, h1, h5, h6 {
     font-family: Georgia;
 }
 
@@ -49,14 +49,16 @@ img {
 
 .aboutme {
     height: 600px;
-    text-align: center;
+    text-align: left;
     background-image: url(../assets/bg-wheat.png);
     background-repeat: repeat;
     height: 100%;
     display: flex;
     padding: 1%;
+}
 
-
+.overhead {
+    padding: 4%;
 }
 
 
