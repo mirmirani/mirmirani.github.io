@@ -5,6 +5,12 @@
     text-justify: distribute;
 }
 
+
+html {
+    scroll-behavior: smooth;
+  }
+    
+
 .aboutme a {
     color: white;
 }
@@ -66,4 +72,14 @@ input {
     font-size: 200%;
     margin-left: 2%;
     text-align: left;
+}
+
+.intro-icon {
+    color: white;
+    font-size: 313%;
+}
+
+.intro-icon:hover {
+    color: lightskyblue;
+
 }
