@@ -1,202 +1,54 @@
-*, h1 {
-    font-family: Georgia;
+
+#app {
 }
 
-.main {
-    margin: 0 auto;
-    max-width: 1000px;
-    box-shadow: 5px 10px 8px 10px #888888;
 
+.modal-title {
+    padding: 2% 0;
 }
 
-.chapter {
-    height: 110%;
-    padding: 2%;
-}
-
-img {
-    margin-bottom: 3%;
-}
-
-.btnwrap{
-
-    margin: 5% 0 5% 0;
-    display: flex;
-    justify-content: center;
-
-}
-
-.btn {
-    border-radius: 7px;
-    border-style: solid;
-    border-color: lightcoral;
-    border-width: 1.4px;
-    padding: 1.5% 5%;
-    margin: 0% 3%;
-}
-
-.btn:link {
-    text-decoration: none;
-}
-
-.btn:hover{
-   box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19)
-}
-
-.aboutme a {
+.modal-title h2 {
+    margin-left: 2%;
     color: white;
 }
 
-.aboutme {
-    height: 600px;
+.modal-content {
+    margin: 2%;
+    color: black;
+    padding: 2%;
+    max-width: 100%;
+    overflow: ;
+}
+.modal-content li {
+    margin-left: 4%;
+    list-style-type: circle;
+}
+
+.modal-buttons {
     text-align: center;
-    background-image: url(assets/bg-wheat.png);
-    background-repeat: repeat;
-    height: 100%;
-    display: flex;
-    padding: 1%;
+    margin: 2% 0 ;
+}
 
+.modal-buttons a {
+    margin-right: 2%;
+}
 
+.modal-footer {
+    height: 37px;
+}
+
+.columns {
+    text-align: center;
+    padding: 0 2%;
 }
 
 
-.ipw1 {
-    flex: 0 0 65%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+input {
+ max-width: 100%;   
+}
+
+.portfolio h1 {
+    font-size: 200%;
+    margin-left: 2%;
     text-align: left;
 }
-
-.ip {
-background-color: white;
-width: 300px;
-margin: 3%;
-border-radius: 20px;
-padding: 2%;
-max-height: 100%;
-font-size: 100%;
-text-align: left;
-}
-
-.ip2{
-    align-self: flex-end;
-}
-
-.ipw1 h5 {
-    text-decoration: underline;
-    font-family: Georgia;
-}
-
-.ipw2 {
-    flex: 1%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 500%;
-    margin-left: 10%;
-}
-
-
-.vanillajs {
-background-image: url(assets/bg-halftone-yellow.png);
-background-repeat: repeat;
-margin: 0;
-padding: 2%;
-overflow: hidden;
-height: 100%;
-}
-
-.vanillajs h1 {
-margin-bottom: 0%;
-
-}
-
-.flexwrap {
-display: flex;
-flex-flow: row wrap;
-overflow: hidden;
-justify-content: center;
-padding: 1%;
-
-}
-
-.flexex {
-background-color: white;
-margin: 2%;
-border-radius: 0 0 10px 10px;
-text-align: center;
-max-width: 40%;
-}
-
-.react {
-background-image: url(assets/bg-morocco-blue.png);
-background-repeat: repeat;
-}
-
-
-.django {
-background-image: url(assets/bg-green.png);
-background-repeat: repeat;
-}
-
-.golang {
-background-image: url(assets/bg-django.png);
-background-repeat: repeat;
-}
-
-.books {
-height: 100%;
-padding: 2%;
-background-image: url(assets/food.png);
-background-repeat: repeat;
-text-align: left;
-}
-
-.mySlides {
-    margin: 2%;
-}
-
-
-
-.Reachme {
-    background-image: url(assets/bg-memphis.png);
-    background-repeat: repeat;
-    margin: 0;
-    padding: 4%;
-    height: 120%;
-}
-
-.Reachme h5 {
-    font-size: 200%;
-    margin: 0;
-    color: white;
-    font-family: Georgia;
-}
-
-.footer {
-    display: flex;
-    justify-content: center;
-    flex-flow: row wrap;
-    gap: 3%;
-}
-
-.footer a {
-    font-size: 500%;
-    margin: 0;
-    color: white;
-}
-
-@media only screen and (max-width: 600px) {
-    .flexwrap {
-flex-direction: column;
-    }
-
-    .flexex {
-        max-width: 80%;
-    }
-
-    .books{
-        display: none;
-    }
-  }
