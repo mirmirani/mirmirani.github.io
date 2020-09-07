@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title> Vue Learning </title>
+  <title> Portfolio </title>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src="https://kit.fontawesome.com/b5035ca9ea.js" crossorigin="anonymous"></script>
@@ -17,28 +17,27 @@
   <section class="hero is-info is-fullheight">
 
     <div class="hero-head w3-white">
-      <nav class="navbar">
+      <nav class="navbar" id="app">
         <div class="container has-text-dark">
           <div class="navbar-brand">
-            <a class="navbar-item has-text-dark">
-              <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo">
-            </a>
-            <span class="navbar-burger burger" data-target="navbarMenuHeroB">
+            <span v-on:click="showNav = !showNav" v-bind:class="{ 'is-active' : showNav }" class="navbar-burger burger" data-target="navbarMenuHeroB">
               <span></span>
               <span></span>
               <span></span>
             </span>
           </div>
-          <div id="navbarMenuHeroB" class="navbar-menu">
+          <div id="navbarMenuHeroB" v-bind:class="{ 'is-active' : showNav }" class="navbar-menu">
             <div class="navbar-end">
-              <a class="navbar-item has-text-dark">
+              <a class="navbar-item has-text-dark" href="index.html">
                 Home
               </a>
-              <a class="navbar-item has-text-dark">
+              <a class="navbar-item has-text-dark" href="aboutme.html">
                 About me
               </a>
               <span class="navbar-item">
-                <a class="button is-info is-inverted">
+                <a 
+                target="_blank" href="assets/resume.pdf"
+                class="button is-info is-inverted">
                   <span class="icon">
                     <i class="fas fa-file-pdf"></i>
                   </span>
@@ -47,11 +46,11 @@
               </span>
 
               <span class="navbar-item">
-                <a class="button is-info is-inverted">
+                <a target="_blank" href="https://github.com/mirmirani" class="button is-info is-inverted">
                   <span class="icon">
                     <i class="fab fa-github"></i>
                   </span>
-                  <span>Download</span>
+                  <span>Github</span>
                 </a>
               </span>
 
@@ -66,103 +65,21 @@
         <p class="title w3-animate-opacity">
           Hi, I'm Mir.
         </p>
-        <p class="subtitle w3-animate-opacity">
-          Check out my portfolio below
-        </p>
+        <div class="aboutme">
+        <p>I'm a self-taught dev and a UCL grad. A tech internship in Shanghai motivated me to start coding. You can learn more about me from my <a href="assets/resume.pdf">resumé</a>.</p>
+        <br>
+        <p>For the Back-end I work with Python, Go and Django. <br>
+          While on the front I use JavaScript, HTML, and CSS with SASS. </p>
         <br>
         <p>
-          These days, I am learning Go, TDD and Reactjs. I have a penchant for responsive design, and I am aiming to continuosly improve skills across my tech stack.
-        </p> 
+          These days, I am learning Go, Vue.js and TDD. I have a penchant for responsive design, and I am aiming to continuosly improve skills across my tech stack.
+        </p>
+      </div>
       </div>
     </div>
 
   </section>
-
-<P>
-  <p>I'm a self-taught dev and a UCL grad. A tech internship in Shanghai motivated me to start coding. You can learn more about me from the links to your right.</p>
-  <br>
-  <p>For the Back-end I work with Python, Go and Django. <br>
-    While on the front I use JavaScript, HTML, and CSS with SASS. </p>
- <br>
-
-</P>
-
-
-
-  <section class="portfolio" id="app">
-<div class="sub-section-title">
-  <h1>Software Projects</h1>
-</div>
-
-      <div class="container columns">
-        <div class='column'>
-        <input type="image"
-         class="w3-animate-opacity" 
-         @click="toggleAccordion"
-         onclick="document.getElementById('id01').style.display='block'"
-        src="assets/pyDj-app.gif" alt="" />
-        </div>
-
-        <div class='column'>
-          <input type="image" class="w3-animate-opacity"  src="assets/oppJs.png" alt="">
-          </div>
-
-          <div class='column'>
-            <input type="image" class="w3-animate-opacity"  src="assets/apijs.png" alt="">
-            </div>
-
-          </div>
-
-
-    <div class="sub-section-title">
-      <h1>Market Analysis Projects</h1>
-    </div>
-
-    <div class="container columns">
-      <div class='column'>
-      <img class="w3-animate-opacity"  src="assets/china.png" alt="">
-      </div>
-
-      <div class='column'>
-        <img class="w3-animate-opacity"  src="assets/cancer-diagnostics.png" alt="">
-        </div>
-
-        <div class='column'>
-          <img class="w3-animate-opacity"  src="assets/start-up.png" alt="">
-          </div>
-  </div>
-
-  </section>
-
-  <modals>
-
-    <div id="id01" class="w3-modal w3-animate-opacity">
-      <div class="w3-modal-content w3-card-4">
-        <header class="w3-container w3-light-green"> 
-          <span onclick="document.getElementById('id01').style.display='none'" 
-          class="w3-button w3-large w3-display-topright">&times;</span>
-          <h2>Python-Django: Journaling App</h2>
-        </header>
-        <div class="w3-container">
-          <p>This is app is blah blah</p>
-          <p>Some text..</p>
-        </div>
-        <div>
-        <a class='button is-danger is-rounded'  href="">Live</a>
-        <a class='button is-success is-rounded' href="">Code</a>
-      </div>
-        <footer class="w3-container w3-light-green">
-          <p>Modal Footer</p>
-        </footer>
-      </div>
-    </div>
-  </div>
-
-
-
-  </modals>
-
-
+ 
 </body>
 <script src="app.js"></script>
 </html>

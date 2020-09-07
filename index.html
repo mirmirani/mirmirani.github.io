@@ -20,9 +20,6 @@
       <nav class="navbar" id="app">
         <div class="container has-text-dark">
           <div class="navbar-brand">
-            <a class="navbar-item has-text-dark">
-              <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo">
-            </a>
             <span v-on:click="showNav = !showNav" v-bind:class="{ 'is-active' : showNav }" class="navbar-burger burger" data-target="navbarMenuHeroB">
               <span></span>
               <span></span>
@@ -31,10 +28,10 @@
           </div>
           <div id="navbarMenuHeroB" v-bind:class="{ 'is-active' : showNav }" class="navbar-menu">
             <div class="navbar-end">
-              <a class="navbar-item has-text-dark">
+              <a class="navbar-item has-text-dark" href="index.html">
                 Home
               </a>
-              <a class="navbar-item has-text-dark">
+              <a class="navbar-item has-text-dark" href="aboutme.html">
                 About me
               </a>
               <span class="navbar-item">

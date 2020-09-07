@@ -1,4 +1,24 @@
 
+.aboutme {
+    max-width: 60%;
+    margin: auto;
+    text-justify: distribute;
+}
+
+.aboutme a {
+    color: white;
+}
+
+.aboutme a:visited {
+    color: white;
+}
+
+
+.aboutme a:hover {
+    color: hotpink;
+}
+
+
 .modal-title {
     padding: 2% 0;
 }
