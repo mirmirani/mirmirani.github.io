@@ -1,12 +1,10 @@
-
 <!DOCTYPE html>
 <html>
 <head>
   <title> Portfolio </title>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src="https://kit.fontawesome.com/b5035ca9ea.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="https://unpkg.com/vue@next"></script>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,71 +13,149 @@
 <body>
 
   <section class="hero is-info is-fullheight">
-
-    <div class="hero-head w3-white">
-      <nav class="navbar" id="app">
-        <div class="container has-text-dark">
-          <div class="navbar-brand">
-            <span v-on:click="showNav = !showNav" v-bind:class="{ 'is-active' : showNav }" class="navbar-burger burger" data-target="navbarMenuHeroB">
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
-          </div>
-          <div id="navbarMenuHeroB" v-bind:class="{ 'is-active' : showNav }" class="navbar-menu">
-            <div class="navbar-end">
-              <a class="navbar-item has-text-dark" href="index.html">
-                Home
-              </a>
-              <a class="navbar-item has-text-dark" href="aboutme.html">
-                About me
-              </a>
-              <span class="navbar-item">
-                <a 
-                target="_blank" href="assets/resume.pdf"
-                class="button is-info is-inverted">
-                  <span class="icon">
-                    <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Resumé</span>
-                </a>
-              </span>
-
-              <span class="navbar-item">
-                <a target="_blank" href="https://github.com/mirmirani" class="button is-info is-inverted">
-                  <span class="icon">
-                    <i class="fab fa-github"></i>
-                  </span>
-                  <span>Github</span>
-                </a>
-              </span>
-
-            </div>
-          </div>
-        </div>
-      </nav>
-    </div>
-    
+  
     <div class="hero-body">
-      <div class="container has-text-centered">
+      <div class="intro has-text-centered">
         <p class="title w3-animate-opacity">
           Hi, I'm Mir.
         </p>
-        <div class="aboutme">
-        <p class="w3-animate-opacity">I'm a self-taught dev and a UCL grad. A tech internship in Shanghai motivated me to start coding. You can learn more about me from my <a href="assets/resume.pdf">resumé</a>.</p>
-        <br>
-        <p class="w3-animate-opacity">For the Back-end I work with Python, Go and Django. <br>
-          While on the front I use JavaScript, HTML, and CSS with SASS. </p>
-        <br>
-        <p class=" w3-animate-opacity">
-          These days, I am learning Go, Vue.js and TDD. I have a penchant for responsive design, and I am aiming to continuosly improve skills across my tech stack.
+        <p class="subtitle w3-animate-opacity">
+          Check out my portfolio below
         </p>
-      </div>
+        <a class="intro-icon" href="#portfolio"><i class="fas fa-arrow-alt-circle-down"></i></a>
       </div>
     </div>
 
+
   </section>
- 
+
+<section id='portfolio' class='portfolio'>
+    <div id='app' v-cloak>
+      <div class="new-cards-wrap">
+            <app-cards />
+          </div>
+    </div>
+  </section>
+
+  <section class='try-new'>
+    <div class="container">
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/design_128.png?raw=true">
+                    <h3>Design</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>Design is something I took interest in early on, I am curious to learn about what makes a product attractive and something users go back to again and again. I hope to keep pushing in this field.</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/code_128.png?raw=true">
+                    <h3>Code</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>
+                      My coding skills and toolset are something I aim to keep growing. Right now I work with a Python and Vue stack and my strength lies in working with frontend tools.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/launch_128.png?raw=true">
+                    <h3>Launch</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>Currently I am working as a QA Tester at StuRents. This role helps me learn about product design and gives me the inside track on what a successful user story looks like</p>
+                    <a href="Mir Mirani cv.pdf">Resumé</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
 </body>
-<script src="app.js"></script>
-</html>
+
+<script>
+const app = Vue.createApp({
+  props: ['showNav']
+   
+})
+
+app.component('app-cards', {
+    template: `
+
+    <div class="new-cards 1" v-for='str in cards' :key='str'>
+
+
+        <img :src="str.picture" alt="">
+        <h1>{{ str.name }}</h1>
+        <div class="new-cards-buttons">
+          <a :href="str.liveLink" class="new-cards live">Live</a>
+          <a :href="str.codeLink" class="new-cards code">Code</a>
+  </div>
+
+</div>
+    `,
+    data() {
+        return {
+            cards: [
+        {
+          name: "Vue.js Task Tracker",
+          liveLink: "https://mirmirani.github.io/vue-task-tracker/",
+          codeLink: "https://github.com/mirmirani/vue-task-tracker",
+          info: "hello world",
+          picture: "vue-task-tracker.png",
+          overlayBoolean: false
+        },
+        {
+          name: "Vue Shopfront",
+          liveLink: "https://mirmirani.github.io/vue-vegstore/",
+          codeLink: "https://github.com/mirmirani/vue-vegstore",
+          info: "hello world",
+          picture: "vue-veg.png",
+          overlayBoolean: false
+        },
+        {
+          name: "JavaScript Calculator",
+          liveLink: "https://mirmirani.github.io/Js_calculator/",
+          codeLink: "https://github.com/mirmirani/Js_calculator",
+          info: "This app is a Vanilla Javascript calculator, Core features of this app include: the use of Object Oriented Programming and the use of ordered functions",
+          picture: "js-calc.png",
+          overlayBoolean: false
+        },
+        {
+          name: "API Quote generator",
+          liveLink: "https://mirmirani.github.io/quote-generator/",
+          codeLink: "https://github.com/mirmirani/quote-generator",
+          info: "This quote generator makes use of an external API consisting of quotes on several topics. The generated quotes can then be posted on a user's twitter account. Core features of this app include: Use of Async Await and use of promises",
+          picture: "api-quote.png",
+          overlayBoolean: false
+        },
+        {
+          name: "Django Learning Log",
+          liveLink: "https://learninglogger.herokuapp.com/",
+          codeLink: "https://https://github.com/mirmirani/learning_log",
+          info: "This Django powered app is a personal learning journal. Users can add entries under seperate topics about what they may be learning. This project is based on the MVC design model",
+          picture:  "dj-project.png",
+          overlayBoolean: false
+        }],
+        }
+    }, //end of data
+})
+    
+app.mount('#app')
+</script>
+  
