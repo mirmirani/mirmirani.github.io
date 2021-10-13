@@ -1,12 +1,10 @@
-
 <!DOCTYPE html>
 <html>
 <head>
   <title> Portfolio </title>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src="https://kit.fontawesome.com/b5035ca9ea.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="https://unpkg.com/vue@next"></script>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,53 +13,9 @@
 <body>
 
   <section class="hero is-info is-fullheight">
-
-    <div class="hero-head w3-white">
-      <nav class="navbar" id="app">
-        <div class="container has-text-dark">
-          <div class="navbar-brand">
-            <span v-on:click="showNav = !showNav" v-bind:class="{ 'is-active' : showNav }" class="navbar-burger burger" data-target="navbarMenuHeroB">
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
-          </div>
-          <div id="navbarMenuHeroB" v-bind:class="{ 'is-active' : showNav }" class="navbar-menu">
-            <div class="navbar-end">
-              <a class="navbar-item has-text-dark" href="index.html">
-                Home
-              </a>
-              <a class="navbar-item has-text-dark" href="aboutme.html">
-                About me
-              </a>
-              <span class="navbar-item">
-                <a 
-                target="_blank" href="assets/resume.pdf"
-                class="button is-info is-inverted">
-                  <span class="icon">
-                    <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Resumé</span>
-                </a>
-              </span>
-
-              <span class="navbar-item">
-                <a target="_blank" href="https://github.com/mirmirani" class="button is-info is-inverted">
-                  <span class="icon">
-                    <i class="fab fa-github"></i>
-                  </span>
-                  <span>Github</span>
-                </a>
-              </span>
-
-            </div>
-          </div>
-        </div>
-      </nav>
-    </div>
-    
+  
     <div class="hero-body">
-      <div class="container has-text-centered">
+      <div class="intro has-text-centered">
         <p class="title w3-animate-opacity">
           Hi, I'm Mir.
         </p>
@@ -72,222 +26,135 @@
       </div>
     </div>
 
+
   </section>
 
-  <section id="portfolio" class="portfolio">
-<div class="sub-section-title">
-  <h1>Software Projects</h1>
-</div>
-
-    <div class="columns">
-        <div class='column'>
-        <input type="image"
-         class="w3-animate-opacity" 
-         onclick="document.getElementById('id01').style.display='block'"
-        src="assets/pyDj-app.gif" alt="">
-        </div>
-
-        <div class='column'>
-          <input type="image" class="w3-animate-opacity" onclick="document.getElementById('id02').style.display='block'" src="assets/oppJs.png" alt="">
+<section id='portfolio' class='portfolio'>
+    <div id='app' v-cloak>
+      <div class="new-cards-wrap">
+            <app-cards />
           </div>
+    </div>
+  </section>
 
-          <div class='column'>
-            <input type="image" class="w3-animate-opacity" onclick="document.getElementById('id03').style.display='block'" src="assets/apijs.png" alt="">
+  <section class='try-new'>
+    <div class="container">
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/design_128.png?raw=true">
+                    <h3>Design</h3>
+                </div>
             </div>
-      
-    </div>
-
-
-    <div class="sub-section-title">
-      <h1>Market Analysis Projects</h1>
-    </div>
-
-    <div class="columns">
-      <div class='column'>
-      <input type="image" class="w3-animate-opacity"  onclick="document.getElementById('id04').style.display='block'" src="assets/china.png" alt="">
-      </div>
-
-      <div class='column'>
-        <input type="image" class="w3-animate-opacity"
-        onclick="document.getElementById('id05').style.display='block'"  src="assets/cancer-diagnostics.png" alt="">
+            <div class="face face2">
+                <div class="content">
+                    <p>Design is something I took interest in early on, I am curious to learn about what makes a product attractive and something users go back to again and again. I hope to keep pushing in this field.</p>
+                </div>
+            </div>
         </div>
-
-        <div class='column'>
-          <input type="image" class="w3-animate-opacity" onclick="document.getElementById('id06').style.display='block'" src="assets/start-up.png" alt="">
-          </div>
-  </div>
-
-  </section>
-
-  <modals>
-
-    <div id="id01" class="w3-modal w3-animate-opacity">
-      <div class="w3-modal-content w3-card-4">
-        <header class="modal-title w3-container has-background-info"> 
-
-          <span onclick="document.getElementById('id01').style.display='none'" 
-          class="w3-button w3-large w3-display-topright">&times;</span>
-          <h2>Python-Django: Journaling App</h2>
-        </header>
-        <div style="text-align: center; margin: 2% 0;">
-          <img src="assets/djangogif.gif" alt="">
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/code_128.png?raw=true">
+                    <h3>Code</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>
+                      My coding skills and toolset are something I aim to keep growing. Right now I work with a Python and Vue stack and my strength lies in working with frontend tools.
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="modal-content w3-container">
-          <p>This Django powered app is a personal learning journal. Users can add entries under seperate topics about what they may be learning.
-          </p>
-          <br>
-          <p>Creating this App I learned to:</p>
-          <ul>
-            <li>make use of Object Oriented Programming </li>
-            <li>make use of the the MVC design model</li>
-            <li>carry out debugging and deployment</li>
-            <li>add personilised user accounts to the app</li>
-            <li>navigate the basics of backend security</li>
-          </ul>
-          <br>
-          <p>you can check out the app or it's code below</p>
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/launch_128.png?raw=true">
+                    <h3>Launch</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>Currently I am working as a QA Tester at StuRents. This role helps me learn about product design and gives me the inside track on what a successful user story looks like</p>
+                    <a href="Mir Mirani cv.pdf">Resumé</a>
+                </div>
+            </div>
         </div>
-        <div class="modal-buttons">
-        <a class='button is-small is-danger is-rounded'  target="_blank" href="https://learninglogger.herokuapp.com/">Live</a>
-        <a class='button is-small is-success is-rounded' href="https://github.com/mirmirani/learning_log" target="_blank">Code</a>
-      </div>
-        <footer class="modal-footer w3-container has-background-info">
-        </footer>
-      </div>
     </div>
-
-
-    <div id="id02" class="w3-modal w3-animate-opacity">
-      <div class="w3-modal-content w3-card-4">
-        <header class="modal-title w3-container has-background-info"> 
-          <span onclick="document.getElementById('id02').style.display='none'" 
-          class="w3-button w3-large w3-display-topright">&times;</span>
-          <h2>OOP Javascript: calculator</h2>
-        </header>
-        <div class="modal-content w3-container">
-          <p>This app is a purely Javascript  calculator.
-          </p>
-          <br>
-          <p>Core features of this app include:</p>
-          <ul>
-            <li>the use of Object Oriented Programming </li>
-            <li>the use of ordered functions</li>
-            <li>making use of the HTML DOM</li>
-            <li>using CSS grid</li>
-          </ul>
-          <br>
-          <p>you can check out the live app or it's code below</p>
-        </div>
-        <div class="modal-buttons">
-          <a class='button is-small is-danger is-rounded' target="_blank" href="https://mirmirani.github.io/Js_calculator/" >Live</a>
-          <a class='button is-small is-success is-rounded' target="_blank" href="https://github.com/mirmirani/Js_calculator" >Code</a>
-      </div>
-        <footer class="modal-footer w3-container has-background-info">
-        </footer>
-      </div>
-    </div>
-
-    <div id="id03" class="w3-modal w3-animate-opacity">
-      <div class="w3-modal-content w3-card-4">
-        <header class="modal-title w3-container has-background-info"> 
-          <span onclick="document.getElementById('id03').style.display='none'" 
-          class="w3-button w3-large w3-display-topright">&times;</span>
-          <h2>APIs and JSON Javascript: Quote Generator</h2>
-        </header>
-        <div class="modal-content w3-container">
-          <p>This quote generator makes use of an external API consisting of quotes on several topics. The generated quotes can then be posted on a user's twitter account.
-          </p>
-          <br>
-          <p>Core features of this app include:</p>
-          <ul>
-            <li>use of Async Await</li>
-            <li>use of promises</li>
-            <li>using external APIs </li>
-            <li>extracting from JSON structures</li>
-            <li>use of the HTML DOM</li>
-          </ul>
-          <br>
-          <p>you can check out the live app or it's code below</p>
-        </div>
-        <div class="modal-buttons">
-          <a class='button is-small is-danger is-rounded' target="_blank" href="https://mirmirani.github.io/quote-generator/"  >Live</a>
-          <a class='button is-small is-success is-rounded' target="_blank" href="https://github.com/mirmirani/quote-generator" >Code</a>
-      </div>
-        <footer class="modal-footer w3-container has-background-info">
-        </footer>
-      </div>
-    </div>
-
-    <div id="id04" class="w3-modal w3-animate-opacity">
-      <div class="w3-modal-content w3-card-4">
-        <header class="modal-title w3-container has-background-info"> 
-          <span onclick="document.getElementById('id04').style.display='none'" 
-          class="w3-button w3-large w3-display-topright">&times;</span>
-          <h2>
-            Market Research: Mineral exploration</h2>
-        </header>
-        <div class="modal-content w3-container">
-          <p>For Wicresoft, Shanghai, I had to write a market report on geological prospecting. The firm had a particular company in focus and wanted a report that surveyed its competitors and analysed the mineral prospecting industry in China and elsewhere around the globe. 
-          </p>
-          <br>
-          <p>Core features of this report include:</p>
-          <ul>
-            <li>financial analysis of the company and its competitors</li>
-            <li>SWOT and PESTLE analysis of the company</li>
-            <li>Regional analysis both within China and relative to other countries</li>
-            <li>An overview of the mineral prospecting market</li>
-          </ul>
-          <br>
-          </div>
-        <footer class="modal-footer w3-container has-background-info">
-        </footer>
-      </div>
-    </div>
-
-<div id="id05" class="w3-modal w3-animate-opacity">
-  <div class="w3-modal-content w3-card-4">
-    <header class="modal-title w3-container has-background-info"> 
-      <span onclick="document.getElementById('id05').style.display='none'" 
-      class="w3-button w3-large w3-display-topright">&times;</span>
-      <h2>Market Research: Cancer Diagnostics<h2>
-    </header>
-    <div class="modal-content w3-container">
-      <p>At Advacare Pharma in Shanghai, I was tasked by the CEO to analyse a product he was considering and to prospect it's viability in LDE countries, the firm's target market.</p>
-      <br>
-      <p>My technical background in the field allowed me to quickly understand the technicalities of the product and how it held up compared to it's competitors. I was also able to learn a lot through this product about pharmeceutical manufacturing and supply-chain processes.</p>
-    </div>
-    <footer class="modal-footer w3-container has-background-info">
-    </footer>
-  </div>
-</div>
-
-<div id="id06" class="w3-modal w3-animate-opacity">
-  <div class="w3-modal-content w3-card-4">
-    <header class="modal-title w3-container has-background-info"> 
-      <span onclick="document.getElementById('id06').style.display='none'" 
-      class="w3-button w3-large w3-display-topright">&times;</span>
-      <h2>Business Analysis: upcoming start-ups</h2>
-    </header>
-    <div class="modal-content w3-container">
-      <p>Wicresoft has active interests in acquiring upcoming software oriented start-ups. In this presentation I was tasked to analyse start-ups including their funding status, market context and business model.</p>
-      <br>
-      <p>The presentation provided a great insight into the world of start-ups and the solutions they were coming up with across the globe. This project is what first picqued my interest in tech. </p>
-    </div>
-    <footer class="modal-footer w3-container has-background-info">
-    </footer>
-  </div>
-</div>
-
-
-  </modals>
+</section>
 
 
 
-
-
-
-
- 
 </body>
-<script src="app.js"></script>
-</html>
+
+<script>
+const app = Vue.createApp({
+  props: ['showNav']
+   
+})
+
+app.component('app-cards', {
+    template: `
+
+    <div class="new-cards 1" v-for='str in cards' :key='str'>
+
+
+        <img :src="str.picture" alt="">
+        <h1>{{ str.name }}</h1>
+        <div class="new-cards-buttons">
+          <a :href="str.liveLink" class="new-cards live">Live</a>
+          <a :href="str.codeLink" class="new-cards code">Code</a>
+  </div>
+
+</div>
+    `,
+    data() {
+        return {
+            cards: [
+        {
+          name: "Vue.js Task Tracker",
+          liveLink: "https://mirmirani.github.io/vue-task-tracker/",
+          codeLink: "https://github.com/mirmirani/vue-task-tracker",
+          info: "hello world",
+          picture: "vue-task-tracker.png",
+          overlayBoolean: false
+        },
+        {
+          name: "Vue Shopfront",
+          liveLink: "https://mirmirani.github.io/vue-vegstore/",
+          codeLink: "https://github.com/mirmirani/vue-vegstore",
+          info: "hello world",
+          picture: "vue-veg.png",
+          overlayBoolean: false
+        },
+        {
+          name: "JavaScript Calculator",
+          liveLink: "https://mirmirani.github.io/Js_calculator/",
+          codeLink: "https://github.com/mirmirani/Js_calculator",
+          info: "This app is a Vanilla Javascript calculator, Core features of this app include: the use of Object Oriented Programming and the use of ordered functions",
+          picture: "js-calc.png",
+          overlayBoolean: false
+        },
+        {
+          name: "API Quote generator",
+          liveLink: "https://mirmirani.github.io/quote-generator/",
+          codeLink: "https://github.com/mirmirani/quote-generator",
+          info: "This quote generator makes use of an external API consisting of quotes on several topics. The generated quotes can then be posted on a user's twitter account. Core features of this app include: Use of Async Await and use of promises",
+          picture: "api-quote.png",
+          overlayBoolean: false
+        },
+        {
+          name: "Django Learning Log",
+          liveLink: "https://learninglogger.herokuapp.com/",
+          codeLink: "https://https://github.com/mirmirani/learning_log",
+          info: "This Django powered app is a personal learning journal. Users can add entries under seperate topics about what they may be learning. This project is based on the MVC design model",
+          picture:  "dj-project.png",
+          overlayBoolean: false
+        }],
+        }
+    }, //end of data
+})
+    
+app.mount('#app')
+</script>
