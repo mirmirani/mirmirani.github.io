@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap');
+@import "bourbon";
+@import "neat";
+
+#portfolio{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
 
 .aboutme {
     max-width: 60%;
@@ -31,41 +41,6 @@ html {
     }
 
 
-.modal-title {
-    padding: 2% 0;
-}
-
-.modal-title h2 {
-    margin-left: 2%;
-    color: white;
-}
-
-.modal-content {
-    margin: 2%;
-    color: black;
-    padding: 2%;
-    max-width: 100%;
-}
-.modal-content li {
-    margin-left: 4%;
-    list-style-type: circle;
-}
-
-.modal-buttons {
-    text-align: center;
-    margin: 2% 0 ;
-}
-
-.modal-buttons a {
-    margin-right: 2%;
-}
-
-.modal-footer {
-    height: 37px;
-    margin-bottom: 5%;
-}
-
-
 .columns {
     text-align: center;
     padding: 0 2%;
@@ -82,11 +57,215 @@ input {
     text-align: left;
 }
 
+.intro {
+  margin: 0 auto;
+}
+
 .intro-icon {
-    color: white;
-    font-size: 313%;
+  color: white;
+  font-size: 313%;
 }
 
 .intro-icon:hover {
-    color: lghtskyblue;
+  color: lghtskyblue;
 }
+
+.new-cards-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.new-cards {
+  width: 420px;
+  height: 420px;
+  border-radius: 5%;
+  padding: 1px;
+  font-size: small;
+  border-width: 2px;
+  border-style: solid;
+  box-shadow: 6px 8px #6b6a6a1e;
+  margin: 17px;
+  position: relative;
+}
+
+.new-cards img {
+  border-radius: 5% 5% 0% 0%;
+}
+
+.new-cards h1 {
+  text-align: center;
+  font-family: just another hand;
+  font-size: 40px;
+  margin: 17px;
+}
+
+.new-cards a {
+  border-radius: 15%;
+  padding: 5px;
+  margin: auto;
+  margin-left: 5px;
+  margin-right: 5px;
+
+}
+
+.new-cards .live {
+  border-color: red;
+  color: red;
+}
+
+.new-cards .code {
+  border-color: green;
+  color: green;
+}
+
+.new-cards .Info {
+  border-color: rgba(0, 119, 255, 0.884);
+  color: rgba(0, 119, 255, 0.884);
+}
+
+.new-cards-buttons {
+  justify-content: space-between;
+  padding: absolute;
+  text-align: center;
+  bottom: 0;
+}
+
+
+  .highlights {
+    background-color: brown;
+    padding: 20px;
+  }
+  .pillars {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 70%;
+  }
+
+  .pillar {
+    width: 420px;
+    height: 420px;
+    border-radius: 5px;
+    background-color: aliceblue;
+    padding: 1px;
+    font-size: small;
+    border-width: 2px;
+    border-style: solid;
+    color: brown;
+    margin: 0 17px;
+
+  }
+
+  .pillar.qa h1 {
+    margin: 17px;
+  }
+
+  .try-new{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: consolas;
+}
+
+.container{
+    width: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .card{
+    position: relative;
+    cursor: pointer;
+    background: #333;
+    box-shadow: none;
+}
+
+.container .card .face{
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+.container .card .face.face1{
+    position: relative;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.container .card:hover .face.face1{
+    background: #ff0057;
+    transform: translateY(0);
+}
+
+.container .card .face.face1 .content{
+    opacity: 0.2;
+    transition: 0.5s;
+}
+
+.container .card:hover .face.face1 .content{
+    opacity: 1;
+}
+
+.container .card .face.face1 .content img{
+    max-width: 100px;
+}
+
+.container .card .face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.container .card .face.face2{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+}
+
+.container .card:hover .face.face2{
+    transform: translateY(0);
+}
+
+.container .card .face.face2 .content p{
+    margin: 0;
+    padding: 0;
+}
+
+.container .card .face.face2 .content a{
+    margin: 15px 0 0;
+    display:  inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+}
+
+.container .card .face.face2 .content a:hover{
+    background: #333;
+    color: #fff;
+}
+
+ 
